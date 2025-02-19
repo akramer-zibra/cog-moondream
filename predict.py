@@ -19,7 +19,7 @@ class Predictor(BasePredictor):
         """Run a single prediction on the model"""
         # Load and process image
         # image = Image.open("path/to/image.jpg")
-        encoded_image = model.encode_image(image)
+        encoded_image = self.model.encode_image(image)
 
         return self.model.caption(encoded_image)["caption"]
 
