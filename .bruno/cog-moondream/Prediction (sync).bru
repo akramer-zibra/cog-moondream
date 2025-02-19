@@ -6,11 +6,18 @@ meta {
 
 post {
   url: {{BASE_URL}}/predictions
-  body: multipartForm
+  body: json
   auth: none
+}
+
+body:json {
+  {
+    "image": "https://commons.wikimedia.org/wiki/Main_Page#/media/File:Trees_rising_out_of_Cheow_Lan_Lake,_blue_sky,_eternal_summer_in_Surat_Thani_edited.jpg",
+    "length": "long"
+  }
 }
 
 body:multipart-form {
   length: long
-  image: @file()
+  file: @file(/home/achim/Downloads/1037px-Trees_rising_out_of_Cheow_Lan_Lake,_blue_sky,_eternal_summer_in_Surat_Thani_edited.jpg)
 }
