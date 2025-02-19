@@ -9,7 +9,7 @@ class Predictor(BasePredictor):
         # self.model = torch.load("./weights.pth")
         # Initialize with local model path. Can also read .mf.gz files, but we recommend decompressing
         # up-front to avoid decompression overhead every time the model is initialized.
-        self.model = md.vl(model="./model/moondream-2b-int8.mf")
+        self.model = md.vl(model="./model/moondream-0_5b-int8.mf")
 
     # The arguments and types the model takes as input
     def predict(self,
