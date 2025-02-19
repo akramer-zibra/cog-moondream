@@ -1,4 +1,4 @@
-from cog import BasePredictor, Input, File
+from cog import BasePredictor, Input, Path
 from PIL import Image
 
 import moondream as md
@@ -13,7 +13,7 @@ class Predictor(BasePredictor):
 
     # The arguments and types the model takes as input
     def predict(self,
-          image: File = Input(description="An input image"),
+          image: Path = Input(description="An input image"),
           length: str = Input(description="Caption length either 'short' or 'long'. default is 'long'")
     ) -> str:
         """Run a single prediction on the model"""
