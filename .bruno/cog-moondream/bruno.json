@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "cog-moondream",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
