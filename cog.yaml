@@ -2,6 +2,6 @@ build:
   gpu: false
   python_version: "3.12"
   python_packages:
-    - "moondream==0.0.5"
+    - "moondream==0.0.6"
     - "pillow==10.4.0"
 predict: "predict.py:Predictor"
