@@ -12,7 +12,7 @@ class Predictor(BasePredictor):
 
     # The arguments and types the model takes as input
     def predict(self,
-          image: Path = Input(description="An input image"),
+          image: Path = Input(description="An input image (URL or base64 encoded data string)"),
         #   length: str = Input(description="Caption length either 'short' or 'long'. default is 'long'")
     ) -> str:
         """Run a single prediction on the model"""
