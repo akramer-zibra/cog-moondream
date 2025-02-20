@@ -1,0 +1,24 @@
+meta {
+  name: Prediction URL (sync)
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/predictions
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "input": {
+        "image": "https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/4/8/0/4/8/4/7/hp-5512eb5e5134afa0.jpeg?org_if_sml=1&q=50&width=1600"
+      }
+  }
+}
+
+body:multipart-form {
+  length: long
+  file: @file(/home/achim/Downloads/1037px-Trees_rising_out_of_Cheow_Lan_Lake,_blue_sky,_eternal_summer_in_Surat_Thani_edited.jpg)
+}
